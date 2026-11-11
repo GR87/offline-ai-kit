@@ -1,0 +1,6 @@
+(version 1)
+; Everything allowed except reaching the network: only this Mac (localhost) is reachable.
+(allow default)
+(deny network-outbound)
+(allow network-outbound (remote ip "localhost:*"))
+(allow network-outbound (remote unix-socket))

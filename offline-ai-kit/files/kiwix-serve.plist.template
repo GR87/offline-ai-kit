@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Starts the local Kiwix site (http://localhost:8080) at login and keeps it running.
+     Install: see SKILL.md, step 4. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>local.kiwix-serve</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>__HOME__/Applications/kiwix-tools/kiwix-serve</string>
+    <string>--address=127.0.0.1</string>
+    <string>--port=8080</string>
+    <string>--library</string>
+    <string>--monitorLibrary</string>
+    <string>__HOME__/zim-files/library.xml</string>
+  </array>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>__HOME__/Library/Logs/kiwix-serve.log</string>
+  <key>StandardErrorPath</key><string>__HOME__/Library/Logs/kiwix-serve.log</string>
+</dict>
+</plist>
